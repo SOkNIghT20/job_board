@@ -5,6 +5,8 @@ VisualStudioVersion = 17.13.35931.197 d17.13
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JobBoardApp", "JobBoardApp.csproj", "{6EFC01B6-FB94-4ABE-A09C-E2965C5DF3D2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AuthLibrary", "..\AuthLibrary\AuthLibrary.csproj", "{7B65B02D-3AE0-4E92-BD81-095F44F0844B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{6EFC01B6-FB94-4ABE-A09C-E2965C5DF3D2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6EFC01B6-FB94-4ABE-A09C-E2965C5DF3D2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6EFC01B6-FB94-4ABE-A09C-E2965C5DF3D2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7B65B02D-3AE0-4E92-BD81-095F44F0844B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7B65B02D-3AE0-4E92-BD81-095F44F0844B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7B65B02D-3AE0-4E92-BD81-095F44F0844B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7B65B02D-3AE0-4E92-BD81-095F44F0844B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
