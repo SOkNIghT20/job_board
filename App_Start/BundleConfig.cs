@@ -39,6 +39,7 @@ namespace JobBoardApp
 
         public static void RegisterJQueryScriptManager()
         {
+            
             ScriptManager.ScriptResourceMapping.AddDefinition("jquery",
                 new ScriptResourceDefinition
                 {

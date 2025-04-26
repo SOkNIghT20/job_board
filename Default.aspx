@@ -1,44 +1,43 @@
-﻿<%@ Page Title="Home Page" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="JobBoardApp._Default" %>
+﻿<%@ Page Title="Home Page" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="JobBoardApp._Default" Async="true" %>
+
+<%@ Register Src="~/WebUserControl1.ascx" TagPrefix="uc" TagName="MyControl" %>
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
 
     <main>
-        <section class="row" aria-labelledby="aspnetTitle">
-            <h1 id="aspnetTitle">ASP.NET</h1>
-            <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS, and JavaScript.</p>
-            <p><a href="http://www.asp.net" class="btn btn-primary btn-md">Learn more &raquo;</a></p>
+        <section>
+            <div class="container">
+                <h1>Welcome to the Service Directory</h1>
+                <p>Try the services below to see how they work</p>
+            </div>
         </section>
+        <section>
+            <div class="container">
+                <h5>
+                   Job Finder Web Service
+                </h5>
+                <span class="mb-2">When you submit. This service will query jobs online and add them to our directory for users to find</span>
+                <form>
+                    <div class="">
+                        <asp:TextBox  ID="JobTitle" runat="server" placeholder="Enter Job Title" CssClass="form-label"/>
+                    </div>
+                    <div class="">
+                        <asp:TextBox ID="Location" runat="server" placeholder="Enter Location" CssClass="form-label"/>
+                    </div>
+                    <asp:Button ID="JobButton" runat="server" CssClass="btn btn-primary" Text="Find Jobs" OnClick="JobButton_Click"/>
+                </form>
+                <asp:BulletedList ID="List" 
+                    runat="server"     
+                    DataTextField="DisplayText" />
 
-        <div class="row">
-            <section class="col-md-4" aria-labelledby="gettingStartedTitle">
-                <h2 id="gettingStartedTitle">Getting started</h2>
-                <p>
-                    ASP.NET Web Forms lets you build dynamic websites using a familiar drag-and-drop, event-driven model.
-                A design surface and hundreds of controls and components let you rapidly build sophisticated, powerful UI-driven sites with data access.
-                </p>
-                <p>
-                    <a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301948">Learn more &raquo;</a>
-                </p>
-            </section>
-            <section class="col-md-4" aria-labelledby="librariesTitle">
-                <h2 id="librariesTitle">Get more libraries</h2>
-                <p>
-                    NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.
-                </p>
-                <p>
-                    <a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301949">Learn more &raquo;</a>
-                </p>
-            </section>
-            <section class="col-md-4" aria-labelledby="hostingTitle">
-                <h2 id="hostingTitle">Web Hosting</h2>
-                <p>
-                    You can easily find a web hosting company that offers the right mix of features and price for your applications.
-                </p>
-                <p>
-                    <a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301950">Learn more &raquo;</a>
-                </p>
-            </section>
-        </div>
+            </div> 
+        </section>
+        <section>
+            <uc:MyControl ID="MyControl1" runat="server" />
+        </section>
+        <section>
+            <h2>This site has been accessed <%=Application["visitors"] %> times</h2>
+        </section>
     </main>
 
 </asp:Content>

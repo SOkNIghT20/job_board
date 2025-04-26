@@ -1,9 +1,34 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.13.35931.197 d17.13
+VisualStudioVersion = 17.13.35931.197
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JobBoardApp", "JobBoardApp.csproj", "{6EFC01B6-FB94-4ABE-A09C-E2965C5DF3D2}"
+	ProjectSection(ProjectDependencies) = postProject
+		{5054D536-0386-424F-ABDC-78E0CEA40643} = {5054D536-0386-424F-ABDC-78E0CEA40643}
+	EndProjectSection
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "j", "..\j\", "{5054D536-0386-424F-ABDC-78E0CEA40643}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.7.2"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_52235"
+		Debug.AspNetCompiler.PhysicalPath = "..\j\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_52235\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_52235"
+		Release.AspNetCompiler.PhysicalPath = "..\j\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_52235\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "52235"
+		SlnRelativePath = "..\j\"
+		DefaultWebSiteLanguage = "Visual C#"
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AuthLibrary", "..\AuthLibrary\AuthLibrary.csproj", "{7B65B02D-3AE0-4E92-BD81-095F44F0844B}"
 EndProject
@@ -21,6 +46,10 @@ Global
 		{7B65B02D-3AE0-4E92-BD81-095F44F0844B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7B65B02D-3AE0-4E92-BD81-095F44F0844B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7B65B02D-3AE0-4E92-BD81-095F44F0844B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5054D536-0386-424F-ABDC-78E0CEA40643}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5054D536-0386-424F-ABDC-78E0CEA40643}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5054D536-0386-424F-ABDC-78E0CEA40643}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{5054D536-0386-424F-ABDC-78E0CEA40643}.Release|Any CPU.Build.0 = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

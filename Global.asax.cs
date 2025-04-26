@@ -17,5 +17,18 @@ namespace JobBoardApp
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
         }
+
+        void Application_BeginRequest(object sender, EventArgs e)
+        {
+            string path = Request.Path.ToLower();
+
+            if (path.EndsWith(".aspx")) // Only count page loads
+            {
+                Application.Lock();
+                Application["visitors"] = Application["visitors"] == null ? 1 : (int)Application["visitors"] + 1;
+                Application.UnLock();
+            }
+        }
+
     }
 }
