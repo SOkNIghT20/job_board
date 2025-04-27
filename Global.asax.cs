@@ -5,7 +5,7 @@ using System.Web;
 using System.Web.Security;
 using System.Web.SessionState;
 
-namespace JobBoardApplication
+namespace JobBoard_Sonit
 {
     public class Global : System.Web.HttpApplication
     {
