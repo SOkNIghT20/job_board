@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ID="e0b8a07d-7490-4123-98fe-efa828706d6e" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://webstrar133.fulton.asu.edu/page0/Service.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="Service1.disco" MetadataType="Disco" ID="b61d9646-4d09-46ea-8758-cd09b1c0c15d" SourceId="1" SourceUrl="http://webstrar133.fulton.asu.edu/page0/Service.svc?disco" />
+    <MetadataFile FileName="Service3.xsd" MetadataType="Schema" ID="6f4cc2d9-c62e-44f9-8576-ee26b5a8b509" SourceId="1" SourceUrl="http://webstrar133.fulton.asu.edu/page0/Service.svc?xsd=xsd2" />
+    <MetadataFile FileName="Service31.xsd" MetadataType="Schema" ID="115a84d1-c22d-40ab-91a3-91ea7261c71b" SourceId="1" SourceUrl="http://webstrar133.fulton.asu.edu/page0/Service.svc?xsd=xsd0" />
+    <MetadataFile FileName="Service1.wsdl" MetadataType="Wsdl" ID="b1fc4656-54be-4a2e-8a23-215ba11de68a" SourceId="1" SourceUrl="http://webstrar133.fulton.asu.edu/page0/Service.svc?wsdl" />
+    <MetadataFile FileName="Service32.xsd" MetadataType="Schema" ID="698b8bc4-09f0-400b-a229-bdab9dd3193a" SourceId="1" SourceUrl="http://webstrar133.fulton.asu.edu/page0/Service.svc?xsd=xsd1" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

@@ -11,60 +11,43 @@ namespace JobBoardApplication
 {
 
 
-    public partial class Default
+    public partial class Captcha
     {
 
         /// <summary>
-<<<<<<< HEAD
-        /// JobTitle control.
-=======
-        /// form1 control.
->>>>>>> 7547b5707d091a41b6546f231d37bbf9be8d8c3a
+        /// lblPrompt control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-<<<<<<< HEAD
-        protected global::System.Web.UI.WebControls.TextBox JobTitle;
+        protected global::System.Web.UI.WebControls.Label lblPrompt;
 
         /// <summary>
-        /// Location control.
+        /// txtUserInput control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox Location;
+        protected global::System.Web.UI.WebControls.TextBox txtUserInput;
 
         /// <summary>
-        /// JobButton control.
+        /// btnRefresh control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button JobButton;
+        protected global::System.Web.UI.WebControls.Button btnRefresh;
 
         /// <summary>
-        /// List control.
+        /// lblStatus control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.BulletedList List;
-
-        /// <summary>
-        /// MyControl1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::JobBoardApp.WebUserControl1 MyControl1;
-=======
-        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
->>>>>>> 7547b5707d091a41b6546f231d37bbf9be8d8c3a
+        protected global::System.Web.UI.WebControls.Label lblStatus;
     }
 }

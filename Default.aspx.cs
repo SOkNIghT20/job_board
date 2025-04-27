@@ -12,9 +12,9 @@ using JobBoardApp.JobSearch;
 using Newtonsoft.Json;
 
 
-namespace JobBoardApp
+namespace JobBoardApplication
 {
-    public partial class _Default : Page
+    public partial class Default : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {

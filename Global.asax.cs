@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -31,4 +32,21 @@ namespace JobBoardApp
         }
 
     }
+=======
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.Security;
+using System.Web.SessionState;
+
+namespace JobBoard_Sonit
+{
+    public class Global : System.Web.HttpApplication
+    {
+        protected void Application_Start(object sender, EventArgs e)
+        {
+        }
+    }
+>>>>>>> 7547b5707d091a41b6546f231d37bbf9be8d8c3a
 }

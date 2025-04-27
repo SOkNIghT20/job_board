@@ -1,0 +1,6 @@
+﻿<Staff>
+	<User>
+		<Username>grader</Username>
+		<PasswordHash>REPLACE_ME</PasswordHash>
+	</User>
+</Staff>
