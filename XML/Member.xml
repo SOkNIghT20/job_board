@@ -1,0 +1,10 @@
+<Members>
+  <User>
+    <Username>grader</Username>
+    <PasswordHash>REPLACE_ME</PasswordHash>
+  </User>
+  <User>
+    <Username>wpletka</Username>
+    <PasswordHash>pmWkWSBCL51Bfkhn79xPuKBKHz//H6B+mY6G9/eieuM=</PasswordHash>
+  </User>
+</Members>
