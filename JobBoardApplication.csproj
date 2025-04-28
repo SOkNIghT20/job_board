@@ -977,16 +977,16 @@
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\AuthLibrary\AuthLibrary.csproj">
-      <Project>{7b65b02d-3ae0-4e92-bd81-095f44f0844b}</Project>
-      <Name>AuthLibrary</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <ItemGroup>
     <WCFMetadataStorage Include="Connected Services\JobSearch2\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="AuthLibrary\AuthLibrary.csproj">
+      <Project>{7b65b02d-3ae0-4e92-bd81-095f44f0844b}</Project>
+      <Name>AuthLibrary</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
