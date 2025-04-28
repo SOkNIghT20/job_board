@@ -1,7 +1,7 @@
 ﻿using System;
 using System.IO;
 using System.Xml;
-//using AuthLibrary;
+using AuthLibrary;
 
 namespace JobBoardApplication
 {
@@ -9,46 +9,66 @@ namespace JobBoardApplication
     {
         protected void btnLogin_Click(object sender, EventArgs e)
         {
-            //string username = txtUsername.Text.Trim();
-            //string password = txtPassword.Text.Trim();
-            //string role = ddlRole.SelectedValue;
+            string username = txtUsername.Text.Trim();
+            string password = txtPassword.Text.Trim();
+            string role = ddlRole.SelectedValue;
 
-            //// Loads the right XML file depending on the role selected
-            //string filePath = Server.MapPath($"~/XML/{(role == "staff" ? "Staff.xml" : "Member.xml")}");
+            // Determine which file to load based on selected role
+            string filePath = Server.MapPath(role == "staff" ? "~/XML/Staff.xml" : "~/XML/Member.xml");
 
-            //// Checks if the XML file actually exists before trying to read it
-            //if (!File.Exists(filePath))
-            //{
-            //    lblResult.Text = "User file not found.";
-            //    return;
-            //}
+            // Check if file exists
+            if (!File.Exists(filePath))
+            {
+                lblResult.Text = "User file not found.";
+                return;
+            }
 
-            //XmlDocument doc = new XmlDocument();
-            //doc.Load(filePath);
+            // Load the XML file
+            XmlDocument doc = new XmlDocument();
+            doc.Load(filePath);
 
-            //// Trys to find the user with the username given
-            //XmlNode userNode = doc.SelectSingleNode($"//User[Username='{username}']");
-            //if (userNode != null)
-            //{
-            //    // Compares entered password with hashed password on file
-            //    string storedHash = userNode["PasswordHash"].InnerText;
-            //    if (PasswordHasher.VerifyPassword(password, storedHash))
-            //    {
-            //        // Saves user info in session and shows success message
-            //        Session["username"] = username;
-            //        Session["role"] = role;
-            //        lblResult.ForeColor = System.Drawing.Color.Green;
-            //        lblResult.Text = $"Login successful as {role.ToUpper()}";
-            //    }
-            //    else
-            //    {
-            //        lblResult.Text = "Invalid password.";
-            //    }
-            //}
-            //else
-            //{
-            //    lblResult.Text = "Username not found.";
-            //}
+            // Look for the username inside the correct XML
+            XmlNode userNode = doc.SelectSingleNode($"//User[Username='{username}']");
+            if (userNode != null)
+            {
+                // Found the user, now verify password
+                string storedHash = userNode["PasswordHash"].InnerText;
+                if (PasswordHasher.VerifyPassword(password, storedHash))
+                {
+                    // Password is correct
+                    Session["username"] = username;
+                    Session["role"] = role;
+
+                    // Now redirect based on role and user type
+                    if (role == "staff")
+                    {
+                        if (username.ToLower() == "ta")
+                        {
+                            Response.Redirect("~/Admin.aspx"); // Admin (TA) goes to Admin.aspx
+                        }
+                        else
+                        {
+                            Response.Redirect("~/Staff.aspx"); // Normal staff goes to Staff.aspx
+                        }
+                    }
+                    else if (role == "member")
+                    {
+                        Response.Redirect("~/Member.aspx"); // Members go to Member.aspx
+                    }
+                }
+                else
+                {
+                    // Password doesn't match
+                    lblResult.ForeColor = System.Drawing.Color.Red;
+                    lblResult.Text = "Invalid password.";
+                }
+            }
+            else
+            {
+                // Username not found
+                lblResult.ForeColor = System.Drawing.Color.Red;
+                lblResult.Text = "Username not found.";
+            }
         }
     }
 }

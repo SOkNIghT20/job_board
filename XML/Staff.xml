@@ -1,6 +1,14 @@
 <Staff>
   <User>
-    <Username>grader</Username>
-    <PasswordHash>REPLACE_ME</PasswordHash>
+    <Username>TA</Username>
+    <PasswordHash>2Fsi8IkPXoLXaWcDcVbyoL93m81EEjvVovp6spmiidY=</PasswordHash>
+  </User>
+  <User>
+    <Username>staff1</Username>
+    <PasswordHash>123</PasswordHash>
+  </User>
+  <User>
+    <Username>wpletka</Username>
+    <PasswordHash>pmWkWSBCL51Bfkhn79xPuKBKHz//H6B+mY6G9/eieuM=</PasswordHash>
   </User>
 </Staff>
