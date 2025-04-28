@@ -1,1 +1,1 @@
-﻿<%@ Application Codebehind="Global.asax.cs" Inherits="JobBoard_Sonit.Global" Language="C#" %>
+﻿<%@ Application Codebehind="Global.asax.cs" Inherits="JobBoardApplication.Global" Language="C#" %>

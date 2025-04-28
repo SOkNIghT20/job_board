@@ -1,0 +1,60 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Default.master.cs" Inherits="JobBoardApplication.Default1" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title>Job Board Project</title>
+    <style>
+      body {
+        font-family: Arial;
+        font-size: 14px;
+        color: black;
+        padding: 30px;
+      }
+
+      table {
+        border-collapse: collapse;
+        width: 100%;
+        margin-top: 20px;
+      }
+
+      th,
+      td {
+        border: 1px solid #ccc;
+        padding: 8px;
+        text-align: left;
+        font-weight: normal;
+        font-size: 14px;
+        color: black;
+      }
+
+      th {
+        background-color: #f4f4f4;
+      }
+
+      h1,
+      h2,
+      p,
+      ul,
+      li {
+        font-size: 14px;
+        font-weight: normal;
+        color: black;
+      }
+
+      a {
+        color: black;
+        text-decoration: underline;
+      }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+</body>
+</html>

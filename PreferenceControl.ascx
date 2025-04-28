@@ -1,5 +1,4 @@
-﻿PreferenceControl.ascx
-
+﻿
 <%@ Control Language="C#" AutoEventWireup="true"
     CodeBehind="PreferenceControl.ascx.cs"
     Inherits="JobBoard_Sonit.PreferenceControl" %>

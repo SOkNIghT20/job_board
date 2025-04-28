@@ -8,7 +8,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Xml;
 using System.Xml.Serialization;
-using JobBoardApp.JobSearch;
+using JobBoardApplication.JobSearch2;
 using Newtonsoft.Json;
 
 
@@ -24,17 +24,17 @@ namespace JobBoardApplication
         protected void JobButton_Click(object sender, EventArgs e)
         {
             // Handle button click event
-            var jobTitle = JobTitle.Text;
-            var location = Location.Text;
-            var client = new JobSearch.ServiceClient();
-            var jobs = client.FindJobs(jobTitle, location);
-            List<BasicJobInfo> jobList = new List<BasicJobInfo>();
-            foreach (var job in jobs)
-            {
-                jobList.Add(new BasicJobInfo(job.job_title, job.employer_name));
-            }
-            List.DataSource = jobList;
-            List.DataBind();
+            //var jobTitle = JobTitle.Text;
+            //var location = Location.Text;
+            //var client = new JobSearch2.ServiceClient();
+            //var jobs = client.FindJobs(jobTitle, location);
+            //List<BasicJobInfo> jobList = new List<BasicJobInfo>();
+            //foreach (var job in jobs)
+            //{
+            //    jobList.Add(new BasicJobInfo(job.job_title, job.employer_name));
+            //}
+            //List.DataSource = jobList;
+            //List.DataBind();
         }
     }
 

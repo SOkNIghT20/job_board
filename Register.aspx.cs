@@ -1,7 +1,7 @@
 ﻿using System;
 using System.IO;
 using System.Xml;
-using AuthLibrary;
+//using AuthLibrary;
 
 namespace JobBoardApplication
 {
@@ -39,7 +39,7 @@ namespace JobBoardApplication
                 return;
             }
 
-            string hash = PasswordHasher.HashPassword(password);
+            //string hash = PasswordHasher.HashPassword(password);
 
             XmlElement user = doc.CreateElement("User");
 
@@ -47,7 +47,7 @@ namespace JobBoardApplication
             uname.InnerText = username;
 
             XmlElement pass = doc.CreateElement("PasswordHash");
-            pass.InnerText = hash;
+            //pass.InnerText = hash;
 
             user.AppendChild(uname);
             user.AppendChild(pass);

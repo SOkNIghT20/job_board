@@ -1,5 +1,5 @@
 ﻿using System;
-using AuthLibrary;
+//using AuthLibrary;
 
 namespace JobBoardApplication
 {
@@ -11,10 +11,10 @@ namespace JobBoardApplication
             string plain = txtPassword.Text;
 
             // Hashs it using the DLL
-            string hash = PasswordHasher.HashPassword(plain);
+            //string hash = PasswordHasher.HashPassword(plain);
 
             // Displays the hashed value
-            lblResult.Text = $"Hashed value:<br/>{hash}";
+            //lblResult.Text = $"Hashed value:<br/>{hash}";
         }
     }
 }
