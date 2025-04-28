@@ -1,5 +1,4 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Default.Master" AutoEventWireup="true" CodeBehind="Home.aspx.cs" Inherits="JobBoardApplication.Home" %>
-<%@ Register Src="~/CaptchaForm.ascx" TagPrefix="uc" TagName="CaptchaForm" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 <main>
@@ -50,29 +49,6 @@
          <td><a href="TryItPages/TryIt_Apply.aspx">Test</a></td>
        </tr>
      </table>
-    </section>
-     <section>
-     <div class="container">
-         <h5>
-            Job Finder Web Service
-         </h5>
-         <span class="mb-2">When you submit. This service will query jobs online and add them to our directory for users to find</span>
-         <form>
-             <div class="">
-                 <asp:TextBox  ID="JobTitle" runat="server" placeholder="Enter Job Title" CssClass="form-label"/>
-             </div>
-             <div class="">
-                 <asp:TextBox ID="Location" runat="server" placeholder="Enter Location" CssClass="form-label"/>
-             </div>
-             <asp:Button ID="JobButton" runat="server" CssClass="btn btn-primary" Text="Find Jobs" OnClick="JobButton_Click"/>
-         </form>
-         <asp:BulletedList ID="List" 
-             runat="server"     
-             DataTextField="DisplayText" />
-     </div> 
-      <div>
-        <uc:CaptchaForm ID="CaptchaForm2" runat="server" />
-      </div>
     </section>
 </main>
 </asp:Content>

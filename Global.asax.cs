@@ -16,6 +16,12 @@ namespace JobBoardApplication
 
         }
 
+        void Session_Start(object sender, EventArgs e)
+        {
+            Session["Username"] = "lreny";
+        }
+
+
         void Application_BeginRequest(object sender, EventArgs e)
         {
             string path = Request.Path.ToLower();

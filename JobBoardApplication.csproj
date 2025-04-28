@@ -95,6 +95,7 @@
     <Content Include="TryItPages\TryIt_Apply.aspx" />
     <Content Include="TryItPages\TryIt_Captcha.aspx" />
     <Content Include="TryItPages\TryIt_Hash.aspx" />
+    <Content Include="User.aspx" />
     <Content Include="Web.config" />
     <Content Include="XML\Applications.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -192,6 +193,13 @@
     </Compile>
     <Compile Include="TryItPages\TryIt_Hash.aspx.designer.cs">
       <DependentUpon>TryIt_Hash.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User.aspx.cs">
+      <DependentUpon>User.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User.aspx.designer.cs">
+      <DependentUpon>User.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

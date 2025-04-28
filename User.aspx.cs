@@ -8,11 +8,15 @@ using System.Web.UI.WebControls;
 
 namespace JobBoardApplication
 {
-    public partial class Home : System.Web.UI.Page
+    public partial class User : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            WelcomeLable.Text = $"Welcome {Session["Username"]}";
+            if (Session["Pref_Location"] != null)
+            {
+                Location.Text = Session["Pref_Location"].ToString();
+            }
         }
 
         protected void JobButton_Click(object sender, EventArgs e)
@@ -30,7 +34,8 @@ namespace JobBoardApplication
             MyRepeater.DataSource = jobList;
             MyRepeater.DataBind();
         }
-       protected void MyRepeater_ItemCommand(object source, RepeaterCommandEventArgs e)
+
+        protected void MyRepeater_ItemCommand(object source, RepeaterCommandEventArgs e)
         {
             // Handle item command event
             if (e.CommandName == "Apply")
@@ -43,9 +48,10 @@ namespace JobBoardApplication
                 var service = new ApplyToJobs();
                 string username = Session["Username"] as string;
                 string result = service.Apply(username, jobId);
-                
+
             }
         }
+
         public class BasicJobInfo
         {
             public string Name { get; set; }
@@ -58,7 +64,7 @@ namespace JobBoardApplication
                 Random rand = new Random();
                 this.Name = name;
                 this.Job_title = job_title;
-                this.Id = rand.Next(100, 1000); 
+                this.Id = rand.Next(100, 1000);
             }
 
             public string DisplayText
@@ -67,7 +73,5 @@ namespace JobBoardApplication
             }
 
         }
-
     }
-
 }
